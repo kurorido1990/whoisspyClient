@@ -69,7 +69,7 @@ export default {
 }
 
 .card-wrap{
-  margin-top: 100px;
+  margin-top: 250px;
   width:200px;
   height:280px;
   position:relative;

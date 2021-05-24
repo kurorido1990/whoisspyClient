@@ -10,12 +10,20 @@
 
     <p>活著的平民小於等於2時，臥底勝利。</p>
   </b-jumbotron>
+  <div>
+  <b-button @click="newRoom">建立房間</b-button>
+</div>
 </div>
 </template>
 
 <script>
 export default {
-  name: 'Home'
+  name: 'Home',
+  methods: {
+     newRoom() {
+      this.$router.push({ name: 'newroom' })
+    },
+  }
 }
 </script>
 
