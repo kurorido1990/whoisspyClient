@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img @click="back" src="./assets/logo.jpeg" style="height:250pt; border-radius:99em; margin-bottom: 10px;">
-    <h3><font color="red">Who Is Spy</font></h3>
+    <!-- <h3><font color="red">Who Is Spy</font></h3> -->
     <router-view/>
   </div>
 </template>

@@ -3,6 +3,9 @@ import Router from 'vue-router'
 import VueResource from 'vue-resource'
 import home from '@/components/home'
 import topic from '@/components/topic'
+import newroom from '@/components/newroom'
+import newplayer from '@/components/newplayer'
+import getcard from '@/components/getcard'
 
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 // Import Bootstrap an BootstrapVue CSS files (order is important)
@@ -23,6 +26,7 @@ Vue.use(Router)
 Vue.use(VueResource)
 
 export default new Router({
+  mode:"history",
   routes: [
     {
       path: '/',
@@ -33,6 +37,21 @@ export default new Router({
       path: '/topic',
       name: 'topic',
       component: topic
+    },
+    {
+      path: '/newroom',
+      name: 'newroom',
+      component: newroom
+    },
+    {
+      path: '/newplayer',
+      name: 'newplayer',
+      component: newplayer
+    },
+    {
+      path: '/getcard',
+      name: 'getcard',
+      component: getcard
     },
   ]
 })
