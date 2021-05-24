@@ -18,7 +18,14 @@ Vue.use(VueResource)
 // })
 
 new Vue({
-  el: '#app',
+  // el: '#app',
   router,
   render: h => h(App)
-})
+}).$mount('#app');
+
+
+// new Vue({
+//   router,
+//   store,
+//   render: h => h(App)
+// }).$mount('#app');
