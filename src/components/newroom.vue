@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <b-container style="margin-top: 10pt;width: 500pt;text-align: center;">
+    <b-container style="margin-top: 10pt;width: 230pt;text-align: center;">
       <b-input-group size="sm" class="mb-2">
         <b-form-input v-model="text" @keyup.enter="create" placeholder="請輸入 遊戲人數" ref="createInput"></b-form-input>
         <b-input-group-prepend is-text>
