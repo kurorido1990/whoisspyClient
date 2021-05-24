@@ -45,7 +45,7 @@ export default {
       }
     },
     getCard() {
-      this.$http.get("/api/getCard/"+ this.$route.query.roomID+ "/"+ this.$route.query.playerID).then((res) =>{
+      this.$http.get("https://whoisspy.herokuapp.com/getCard/"+ this.$route.query.roomID+ "/"+ this.$route.query.playerID).then((res) =>{
         console.log(res)
         this.topic = res.data.Topic
 
