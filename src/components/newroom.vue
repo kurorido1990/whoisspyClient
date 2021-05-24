@@ -8,7 +8,7 @@
         </b-input-group-prepend>
       </b-input-group>
 
-      <div><a :href="addPlayer">{{addPlayer}} <b-icon @click="cpoy" icon="clipboard"></a></div>
+      <div><a :href="addPlayer">{{addPlayer}} <b-icon @click="copy" icon="clipboard"></a></div>
       <div><a :href="monitorRoom">{{monitorRoom}}</a></div>
     </b-container>
   </div>
