@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     create() {
-      this.$http.get("/api/createRoom/"+ this.text).then((res) =>{
+      this.$http.get("https://whoisspy.herokuapp.com/createRoom/"+ this.text).then((res) =>{
          var tmpData = res.data
          this.addPlayer = "https://whoisspyclient.herokuapp.com/newplayer?roomID=" + tmpData.roomID
          this.monitorRoom = "https://whoisspyclient.herokuapp.com/room?roomID=" + tmpData.roomID
