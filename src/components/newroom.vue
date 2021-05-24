@@ -8,9 +8,10 @@
         </b-input-group-prepend>
       </b-input-group>
 
-      <div><a :href="addPlayer">{{addPlayer}} <b-icon @click="copy" icon="clipboard"></a></div>
-      <div><a :href="monitorRoom">{{monitorRoom}}</a></div>
+      
     </b-container>
+    <div style="font-size: 12pt;width: 180pt;margin-left: 11px;"><a :href="addPlayer">{{addPlayer}}</a></div>
+    <div style="font-size: 12pt;width: 180pt;margin-left: 11px;"><a :href="monitorRoom">{{monitorRoom}}</a></div>
   </div>
 </template>
 
@@ -27,11 +28,6 @@ export default {
    // e.g. <div ref="text">
 
   methods: {
-    copy() {
-         this.selectText(this.$refs.addPlayer);
-         document.execCommand("copy");
-         alert("複製網址")
-    },
     create() {
       this.$http.get("https://whoisspy.herokuapp.com/createRoom/"+ this.text).then((res) =>{
          var tmpData = res.data
