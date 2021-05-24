@@ -1,31 +1,32 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Ｗho Is Spy"/>
+    <img @click="back" src="./assets/logo.jpeg" style="height:250pt; border-radius:99em; margin-bottom: 10px;">
+    <h3><font color="red">Who Is Spy</font></h3>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  methods: {
+    back () {
+      this.$router.push({ name: 'home' })
+    }
   }
 }
+
 </script>
-
-
 
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 30px;
 }
 </style>
