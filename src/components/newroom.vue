@@ -8,7 +8,7 @@
         </b-input-group-prepend>
       </b-input-group>
 
-      <div><a :href="addPlayer">{{addPlayer}}</a></div>
+      <div><a :href="addPlayer">{{addPlayer}} <b-icon @click="cpoy" icon="clipboard"></a></div>
       <div><a :href="monitorRoom">{{monitorRoom}}</a></div>
     </b-container>
   </div>
@@ -24,7 +24,14 @@ export default {
       monitorRoom:'',
     }
   },
+   // e.g. <div ref="text">
+
   methods: {
+    copy() {
+         this.selectText(this.$refs.addPlayer);
+         document.execCommand("copy");
+         alert("複製網址")
+    },
     create() {
       this.$http.get("https://whoisspy.herokuapp.com/createRoom/"+ this.text).then((res) =>{
          var tmpData = res.data
