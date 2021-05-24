@@ -28,10 +28,10 @@ export default {
     create() {
       this.$http.get("/api/createRoom/"+ this.text).then((res) =>{
          var tmpData = res.data
-        //  this.addPlayer = "https://whoisspyclient.herokuapp.com/newPlayer/" + tmpData.roomID
-        //  this.monitorRoom = "https://whoisspyclient.herokuapp.com/room/" + tmpData.roomID
-        this.addPlayer = "http://localhost:8081/newplayer?roomID=" + tmpData.roomID
-         this.monitorRoom = "http://localhost:8081/room?roomID=" + tmpData.roomID
+         this.addPlayer = "https://whoisspyclient.herokuapp.com/newplayer?roomID=" + tmpData.roomID
+         this.monitorRoom = "https://whoisspyclient.herokuapp.com/room?roomID=" + tmpData.roomID
+        // this.addPlayer = "http://localhost:8081/newplayer?roomID=" + tmpData.roomID
+        //  this.monitorRoom = "http://localhost:8081/room?roomID=" + tmpData.roomID
       })
 
     }
